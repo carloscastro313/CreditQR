@@ -1,0 +1,20 @@
+<ion-menu contentId="main" menuId="first" side="start">
+    <ion-header>
+        <ion-toolbar color="primary">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content color="light">
+        <ion-menu-toggle>
+            <ion-button color="light" (click)="inicio()" expand="full">
+                Inicio
+            </ion-button>
+            <ion-button color="light" (click)="fotosSubidas()" expand="full" *ngIf="route.url == '/home'">
+                Fotos subidas
+            </ion-button>
+            <ion-button color="light" (click)="logout()" expand="full">
+                Desconectar
+            </ion-button>
+        </ion-menu-toggle>
+    </ion-content>
+</ion-menu>

@@ -1,0 +1,15 @@
+<div *ngIf="this.foto != null">
+    <ion-img [src]="foto.url"></ion-img>
+    <ion-text>
+        <h5>Fue publicado por: {{foto.correo}}</h5>
+    </ion-text>
+    <ion-text >
+        <h5>Fecha: {{fecha}}</h5>
+    </ion-text>
+    <ion-button (click)="like()">
+        <ion-icon slot="icon-only" [name]="userLike? 'heart': 'heart-outline'"></ion-icon>
+    </ion-button>
+</div>
+<div *ngIf="this.foto == null || undefined">
+    <ion-spinner name="crescent"></ion-spinner>
+</div>

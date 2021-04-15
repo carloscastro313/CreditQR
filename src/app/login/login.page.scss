@@ -1,0 +1,32 @@
+.img {
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font: 1.5em PressStart2P !important;
+    }
+    padding-bottom: 5em;
+}
+
+form {
+    ion-item {
+        border-radius: 1.5em;
+    }
+    ion-button {
+        padding-top: 10px;
+    }
+}
+
+ion-fab-list {
+    ion-fab-button {
+        width: 4em !important;
+        height: 4em !important;
+    }
+}
+
+.gridBtn {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    gap: 2%;
+}
