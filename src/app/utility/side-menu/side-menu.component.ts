@@ -15,7 +15,7 @@ export class SideMenuComponent implements OnInit {
   constructor(
     private auth : LoginService,
     public route : Router,
-    private toast : ToastService,
+    private toast : ToastService
     ) {
 
     }
@@ -34,6 +34,7 @@ export class SideMenuComponent implements OnInit {
     this.auth.logout()
         .then(() => {
           this.route.navigate(['../login']);
+          
         })
         .catch(() => {
           this.toast.presentToast('Error inesperado');

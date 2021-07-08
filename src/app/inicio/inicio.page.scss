@@ -1,0 +1,29 @@
+.container {
+    background: white;
+    border-radius: 0.5em;
+    padding: 0.6em;
+    h1{
+      font-size: 3.5em;
+    }
+}
+
+.center {
+    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ion-fab-button {
+        width: 25em !important;
+        height: 25em !important;
+        ion-icon {
+            zoom: 3.0;
+        }
+    }
+}
+
+.Select {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}

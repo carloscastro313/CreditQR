@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-menu-button slot="start" menu="first"></ion-menu-button>
+        <ion-title>Inicio</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="light">
+    <div class="container">
+        <ion-text>
+            <h1>${{saldoActual}}</h1>
+            <span>Correo: {{correo}}</span>
+        </ion-text>
+    </div>
+    <div class="center">
+        <ion-fab-button (click)="agregarSaldo()" [disabled]="flag">
+            <ion-icon name="cash-outline"></ion-icon>
+        </ion-fab-button>
+    </div>
+    <h5 class="Select">{{error}}</h5>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button (click)="borrar(this.perfil)" [disabled]="flag">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+</ion-content>

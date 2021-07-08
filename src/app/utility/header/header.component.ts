@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() titulo: string = '';
   @Input() route: string = null;
+  @Input() color: string = '';
 
   constructor() { }
 

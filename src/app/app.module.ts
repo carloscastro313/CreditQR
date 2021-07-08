@@ -14,6 +14,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { Vibration } from '@ionic-native/vibration/ngx';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { UtilityModule } from './utility/utility.module';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,8 +27,11 @@ import { Vibration } from '@ionic-native/vibration/ngx';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
+    UtilityModule
   ],
   providers: [
+    StatusBar,
+    SplashScreen,
     {
       provide: RouteReuseStrategy,
       useClass: IonicRouteStrategy
@@ -32,7 +39,9 @@ import { Vibration } from '@ionic-native/vibration/ngx';
     AngularFireDatabase,
     AngularFirestore,
     AngularFireAuth,
-  Vibration],
+    Vibration,
+    BarcodeScanner,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

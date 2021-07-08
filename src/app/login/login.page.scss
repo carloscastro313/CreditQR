@@ -1,15 +1,24 @@
 .img {
-    padding-top: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
-    h1 {
-        font: 1.5em PressStart2P !important;
+    ion-img{
+      width: 60%;
+      height: 60%;
     }
-    padding-bottom: 5em;
+}
+
+.logo{
+  text-align: center;
+  padding-top: 1em;
+  h1{
+    font: 2em PressStart2P !important;
+  }
+
 }
 
 form {
+  padding-top: 1em;
     ion-item {
         border-radius: 1.5em;
     }

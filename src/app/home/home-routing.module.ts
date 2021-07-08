@@ -6,6 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../inicio/inicio.module').then( m => m.InicioPageModule)
+      }
+    ]
   }
 ];
 
